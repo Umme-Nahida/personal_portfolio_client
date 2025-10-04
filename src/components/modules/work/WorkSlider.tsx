@@ -1,13 +1,8 @@
 "use client"
-// import { serviceData } from '@/utils/service';
-import React from 'react';
-import { RxArrowTopRight } from 'react-icons/rx';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { TbListDetails } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
-import { MdDetails } from "react-icons/md";
 
 
 

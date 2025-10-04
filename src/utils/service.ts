@@ -40,15 +40,6 @@
 
 
 
-
-
-import {
-  RxCrop,
-  RxDesktop,
-  RxPencil2,
-  RxReader,
-} from 'react-icons/rx'
-
 export type Service = {
   icon: string;
   title: string;

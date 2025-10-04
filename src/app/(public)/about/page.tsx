@@ -2,12 +2,11 @@
 
 
 import Image from 'next/image';
-import React, { useState } from 'react';
 import CountUp from "react-countup"
 import img from "../../../../public/assets/developer.png"
 
 const About = () => {
-    const [index, setIndex] = useState(0)
+
     return (
         <div>
             <div className='mt-5 xl:mt-20 container mx-auto lg:h-full flex flex-col xl:flex-row justify-center items-center gap-x-10'>

@@ -1,5 +1,5 @@
 'use client'
-import {Typewriter,Cursor} from 'react-simple-typewriter';
+import {Typewriter} from 'react-simple-typewriter';
 
 
 

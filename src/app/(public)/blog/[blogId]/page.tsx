@@ -4,14 +4,15 @@ import React from 'react';
 
 
 export const generateStaticParams = async()=>{
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/posts`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/blog`)
   const {data:blogs} = await res.json()
 
-  return blogs.slice(0,5).map((blog:IBlogPost)=>({
-    blogId: String(blog.id)
-  }))
-}
+  // console.log("params_Blog",blogs)
 
+  return blogs.data.slice(0,5).map((blog:IBlogPost)=>({
+    blogId: String(blog.id)
+  })) 
+}
 
 const BlogDetails = async({params}:{params: Promise<{blogId:string}>}) => {
 
@@ -23,8 +24,8 @@ const BlogDetails = async({params}:{params: Promise<{blogId:string}>}) => {
 
     return (
         <div>
-           this is blog id details route  {blogId}
-           <BlogDetailsCard blog={data} ></BlogDetailsCard>
+           
+           <BlogDetailsCard blog={data}></BlogDetailsCard>
         </div>
     );
 };
