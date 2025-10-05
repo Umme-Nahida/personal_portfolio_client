@@ -1,9 +1,11 @@
+"use server"
+
 import { redirect } from "next/navigation";
 import { FieldValues } from "react-hook-form";
 import { toast } from "sonner";
 
 export const register = async (data: FieldValues) => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/user`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/user/register`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -12,10 +14,11 @@ export const register = async (data: FieldValues) => {
   });
 
   const result = await res.json(); 
+  console.log("result:",result)
 
   if (!res.ok) {
     console.log("User Registration Failed:", result);
-    throw new Error(result.message || "Registration failed");
+    console.error(result.message || "Registration failed");
   }
 
   return result;
@@ -41,7 +44,7 @@ export const login = async (data: FieldValues) => {
 
   if (!res.ok) {
     console.error("User Login Failed:", result);
-    throw new Error(result.message || "Login failed");
+    // throw new Error(result.message || "Login failed");
   }
 
   return result;
