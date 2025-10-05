@@ -14,9 +14,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import Image from "next/image";
-import { login } from "@/action/auth";
+// import { login } from "@/action/auth";
+// import { toast } from "sonner";
+import { signIn } from "next-auth/react";
 import { toast } from "sonner";
-import { useRouter } from "next/navigation";
 
 type LoginFormValues = {
   email: string;
@@ -31,15 +32,20 @@ export default function LoginForm() {
     },
   });
  
-  const navigate = useRouter()
+ 
 
   const onSubmit = async(values: LoginFormValues) => {
     console.log("Login submitted:", values);
-    const res = await login(values)
-     if(res?.id){
-        toast.success("user login successfully")
-        navigate.push("/")
-      }
+    try{
+       signIn("credentials", {
+        ...values,
+        callbackUrl: "/",
+      });
+
+      toast.success("login user successfully")
+    }catch(err){
+      console.error(err)
+    }
   };
 
   const handleSocialLogin = (provider: "google" | "github") => {

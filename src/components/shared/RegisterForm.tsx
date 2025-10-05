@@ -13,6 +13,9 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { register } from "@/action/auth";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 type RegisterFormValues = {
   name: string;
@@ -31,8 +34,19 @@ export default function RegisterForm() {
     },
   });
 
-  const onSubmit = (values: RegisterFormValues) => {
-    console.log("Form submitted:", values);
+  const router = useRouter()
+  const onSubmit =async (values: RegisterFormValues) => {
+    try{
+      
+      const user = await register(values)
+      console.log("Form submitted:",user);
+      if((user as any).success || (user as any).id ){
+        toast.success("user has registerd successfully")
+        router.push("/login")
+      }
+    }catch(err:any){
+      console.log("err:",err)
+    }
   };
 
   return (
