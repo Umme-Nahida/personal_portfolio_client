@@ -54,20 +54,6 @@ export default function CreateBlogForm() {
         />
       </div>
 
-      {/* Tags */}
-      <div>
-        <label className="block text-sm font-medium mb-1" htmlFor="tags">
-          Tags (comma separated)
-        </label>
-        <input
-          type="text"
-          id="tags"
-          name="tags"
-          placeholder="Next.js, React, Web Development"
-          className="w-full rounded-md border px-3 py-2 focus:ring focus:ring-blue-200"
-        />
-      </div>
-
       {/* Featured */}
       <div>
         <p className="block text-sm font-medium mb-1">Publish</p>

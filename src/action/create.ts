@@ -12,11 +12,10 @@ export const create = async(data:FormData)=>{
     const modifyData = {
         ...blogInfo,
         authorId:session?.user?.id,
-        isFeatured: Boolean(blogInfo.isFeatured),
-        tags:blogInfo.tags.toString().split(",").map((tag)=>tag.trim())
+        published: Boolean(blogInfo.isFeatured)
     }
     
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/posts`,{
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/blog`,{
         method:"POST",
         headers:{
             'Content-Type': "application/json"
