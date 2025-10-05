@@ -11,7 +11,7 @@ export default function CreateBlogForm() {
   return (
     <Form
       action={create}
-      className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-lg space-y-4 w-full"
+      className="max-w-4xl mx-auto p-6 bg-white text-black shadow-md rounded-lg space-y-4 w-full"
     >
       <h2 className="text-xl font-semibold mb-4">Create Blog</h2>
 
@@ -48,8 +48,8 @@ export default function CreateBlogForm() {
         </label>
         <input
           type="url"
-          id="thumbnail"
-          name="thumbnail"
+          id="image"
+          name="image"
           className="w-full rounded-md border px-3 py-2 focus:ring focus:ring-blue-200"
         />
       </div>
@@ -70,7 +70,7 @@ export default function CreateBlogForm() {
 
       {/* Featured */}
       <div>
-        <p className="block text-sm font-medium mb-1">Featured</p>
+        <p className="block text-sm font-medium mb-1">Publish</p>
         <div className="flex gap-6">
           <label className="flex items-center gap-2">
             <input
