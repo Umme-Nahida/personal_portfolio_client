@@ -21,18 +21,27 @@ const Navbar = () => {
 
                     {/* Desktop Menu */}
                     <ul className="hidden md:flex md:items-center space-x-8 text-white font-medium">
-                        <li className="hover:text-cyan-400 transition-colors cursor-pointer">
+                        <Link href='#home'>
+                          <li className="hover:text-cyan-400 transition-colors cursor-pointer">
                             Home
                         </li>
-                        <li className="hover:text-cyan-400 transition-colors cursor-pointer">
+                        </Link>
+                        <Link href="#about">
+                          <li className="hover:text-cyan-400 transition-colors cursor-pointer">
                             About
                         </li>
-                        <li className="hover:text-cyan-400 transition-colors cursor-pointer">
+                        </Link>
+                        
+                        <Link href='#work'>
+                          <li className="hover:text-cyan-400 transition-colors cursor-pointer">
                             Projects
                         </li>
-                        <li className="hover:text-cyan-400 transition-colors cursor-pointer">
+                        </Link>
+                       <Link href={"#contact"}>
+                          <li className="hover:text-cyan-400 transition-colors cursor-pointer">
                             Contact
                         </li>
+                       </Link>
                         {
                             session.status === "authenticated" &&
                             <>

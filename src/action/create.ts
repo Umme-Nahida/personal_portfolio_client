@@ -10,11 +10,14 @@ export const create = async(data:FormData)=>{
     // to conver the data in plain object
     const blogInfo = Object.fromEntries(data.entries())
     const modifyData = {
-        ...blogInfo,
+        title: blogInfo.title,
+        content: blogInfo.content,
+        image: blogInfo.image,
         authorId:session?.user?.id,
         published: Boolean(blogInfo.isFeatured)
     }
     
+    console.log(modifyData)
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/blog`,{
         method:"POST",
         headers:{
@@ -22,11 +25,12 @@ export const create = async(data:FormData)=>{
         },
         body: JSON.stringify(modifyData)
     })
-
+    
+    console.log(modifyData)
     const result = await res.json()
     if(result.id){
         revalidateTag("refetchBlogs")
-        redirect("/")
+        redirect("/dashboard/manage-blog")
     }
-    console.log("result---------:",result)
+    // console.log("result---------:",result)
 }

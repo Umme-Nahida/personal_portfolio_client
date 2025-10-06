@@ -11,7 +11,7 @@ export default function CreateBlogForm() {
   return (
     <Form
       action={create}
-      className="max-w-4xl mx-auto p-6 bg-white text-black shadow-md rounded-lg space-y-4 w-full"
+      className="max-w-4xl mx-auto p-6 bg-blue-400/5 backdrop-blur-3xl border border-cyan-500 text-sky-400 shadow-md rounded-lg space-y-4 w-full"
     >
       <h2 className="text-xl font-semibold mb-4">Create Blog</h2>
 
@@ -85,7 +85,7 @@ export default function CreateBlogForm() {
 
       <button
         type="submit"
-        className="w-full bg-blue-600 text-white font-medium py-2 rounded-md hover:bg-blue-700 transition"
+        className="w-full border border-sky-400 bg-gradient-to-l via-sky-500 from-cyan-400 text-white font-medium py-2 rounded-md hover:bg-blue-700 transition"
       >
         Submit
       </button>

@@ -7,7 +7,6 @@ import { IWorkSlides } from '@/types/types';
 // import PartiClesContainer from '@/components/PartiClesContainer';
 
 const ProjectInfo = ({workSlides}:{workSlides:IWorkSlides}) => {
-    console.log("workslide",workSlides)
     return (
         <div className='flex flex-col xl:flex-row items-center gap-x-8 '>
             {/* text */}

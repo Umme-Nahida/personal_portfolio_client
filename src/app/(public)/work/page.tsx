@@ -12,7 +12,7 @@ const Work = async() => {
 
    const {data} = await res.json()
    const workSlides = data.find((item:IWorkSlides)=> item.id == 1)
-   console.log(workSlides.slides)
+   // console.log(workSlides.slides)
 
     return (
        <>

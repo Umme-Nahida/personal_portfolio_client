@@ -2,8 +2,6 @@
 import UserProfileDashboard from "@/components/modules/dashboard/UserDashoboard";
 import { getUserSession } from "@/utils/getUserSession";
 
-import { getServerSession } from "next-auth";
-
 const DashboardHomePage =async () => {
 
  const session = await getUserSession()
