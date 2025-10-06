@@ -17,3 +17,22 @@ export interface IBlogPost {
   authorId: number;
   author: Author;
 }
+
+
+
+export interface IWorkSlides {
+  id:number
+  slides:ISlide[]
+}
+
+export interface ISlide {
+  images: Image[]
+}
+
+export interface Image {
+  title: string
+  path: string
+  live: string
+  clientLink: string
+  serverLink: string
+}

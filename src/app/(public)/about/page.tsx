@@ -4,8 +4,28 @@
 import Image from 'next/image';
 import CountUp from "react-countup"
 import img from "../../../../public/assets/developer.png"
+import { useEffect, useState } from 'react';
 
 const About = () => {
+  const [data, setData] = useState<any>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/user/about`, {
+          cache: "force-cache",
+        });
+        const result = await res.json();
+        setData(result);
+        console.log(data);
+      } catch (err) {
+        console.error("Failed to fetch about data:", err);
+      }
+    };
+
+    fetchData();
+  }, []);
+
 
     return (
         <div>

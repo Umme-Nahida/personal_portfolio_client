@@ -14,9 +14,9 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import Image from 'next/image';
 import Link from 'next/link';
-import { workSlides } from '@/utils/work';
+import { IWorkSlides } from '@/types/types';
 
-const ServiceSlider = () => {
+const ServiceSlider = ({workSlides}:{workSlides:IWorkSlides}) => {
     return (
        <Swiper
         slidesPerView={1}

@@ -38,9 +38,9 @@ export default function GlassCard({ post }: GlassCardProps) {
     >
       <Card className="bg-white/6 backdrop-blur-lg border border-white/10 rounded-2xl shadow-lg overflow-hidden flex flex-col h-full">
         {/* Image */}
-        <div className="w-full h-48">
+        <div className="w-full h-[300px]">
           <Image
-            src="https://media.istockphoto.com/id/2210205147/photo/ux-ui-web-design-that-provides-a-good-user-experience-is-easy-to-use-and-modern-business.jpg?s=2048x2048&w=is&k=20&c=9zyVj9e2paqhMGPBbYAJFA3fbLGApo5QXfC-Waly6So="
+            src={post.image || "https://media.istockphoto.com/id/2210205147/photo/ux-ui-web-design-that-provides-a-good-user-experience-is-easy-to-use-and-modern-business.jpg?s=2048x2048&w=is&k=20&c=9zyVj9e2paqhMGPBbYAJFA3fbLGApo5QXfC-Waly6So="}
             alt={post.title}
             width={500}
             height={500}
