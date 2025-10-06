@@ -21,7 +21,7 @@ const Navbar = () => {
 
                     {/* Desktop Menu */}
                     <ul className="hidden md:flex md:items-center space-x-8 text-white font-medium">
-                        <Link href='#home'>
+                        <Link href='/'>
                           <li className="hover:text-cyan-400 transition-colors cursor-pointer">
                             Home
                         </li>

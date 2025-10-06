@@ -9,10 +9,8 @@ const DashboardHomePage =async () => {
   
   return (
     <div>
-      <h1>Dashboard Home Page</h1>
-      <p>{session?.user?.name} </p>
-      <p>{session?.user?.email}</p>
 
+      <h1 className="text-xl text-center mt-5 xl:mt-10">My Dashboard</h1>
       <div className="flex items-center justify-center">
         <UserProfileDashboard/>
       </div>
