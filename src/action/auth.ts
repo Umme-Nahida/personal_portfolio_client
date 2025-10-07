@@ -14,10 +14,9 @@ export const register = async (data: FieldValues) => {
   });
 
   const result = await res.json(); 
-  console.log("result:",result)
+  // console.log("result:",result)
 
   if (!res.ok) {
-    console.log("User Registration Failed:", result);
     console.error(result.message || "Registration failed");
   }
 

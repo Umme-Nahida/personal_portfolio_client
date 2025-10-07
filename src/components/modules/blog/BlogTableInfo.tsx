@@ -11,7 +11,6 @@ import {
     AlertDialogAction,
     AlertDialogCancel,
     AlertDialogContent,
-    AlertDialogDescription,
     AlertDialogFooter,
     AlertDialogHeader,
     AlertDialogTitle,
@@ -27,7 +26,6 @@ const BlogTableInfo = ({ posts }: IBlogParams) => {
     const [editPost, setEditPost] = useState<BlogPost | null>(null);
 
     const handleDelete = async (id: number) => {
-        console.log(id)
         const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/blog/${id}`, {
             method: "DELETE"
         })

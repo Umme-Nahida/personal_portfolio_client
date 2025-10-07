@@ -6,7 +6,7 @@ import ServiceSlider from '@/components/modules/work/WorkSlider';
 import { IWorkSlides } from '@/types/types';
 // import PartiClesContainer from '@/components/PartiClesContainer';
 
-const ProjectInfo = ({workSlides}:{workSlides:IWorkSlides}) => {
+const ProjectInfo = ({workSlides}:{workSlides:IWorkSlides[]}) => {
     return (
         <div className='flex flex-col xl:flex-row items-center gap-x-8 '>
             {/* text */}
@@ -33,7 +33,7 @@ const ProjectInfo = ({workSlides}:{workSlides:IWorkSlides}) => {
                 className='w-full xl:max-w-[65%]  lg:my-10 lg:mx-0'>
 
                 {/* slider */}
-                <ServiceSlider key={workSlides.id} workSlides={workSlides}></ServiceSlider>
+                <ServiceSlider workSlides={workSlides}></ServiceSlider>
             </motion.div>
         </div>
     );

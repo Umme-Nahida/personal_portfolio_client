@@ -17,7 +17,7 @@ export const create = async(data:FormData)=>{
         published: Boolean(blogInfo.isFeatured)
     }
     
-    console.log(modifyData)
+   
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/blog`,{
         method:"POST",
         headers:{
@@ -26,11 +26,9 @@ export const create = async(data:FormData)=>{
         body: JSON.stringify(modifyData)
     })
     
-    console.log(modifyData)
     const result = await res.json()
     if(result.id){
         revalidateTag("refetchBlogs")
         redirect("/dashboard/manage-blog")
     }
-    // console.log("result---------:",result)
 }

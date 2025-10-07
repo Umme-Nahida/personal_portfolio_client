@@ -5,7 +5,6 @@ import { getUserSession } from "@/utils/getUserSession";
 const DashboardHomePage =async () => {
 
  const session = await getUserSession()
-   console.log("session",session)
   
   return (
     <div>

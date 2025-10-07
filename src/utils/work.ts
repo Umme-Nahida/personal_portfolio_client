@@ -77,7 +77,7 @@ export const workSlides = {
           { 
             title: 'Food Feast',
             path: 'https://i.ibb.co.com/nsHHj07H/food.jpg',
-            live:'https://restaurant-client-rust.vercel.app/',
+            live:'https://neon-kelpie-a00853.netlify.app/',
             clientLink:'https://github.com/Iftakher99/food-feast',
             serverLink:'https://github.com/Iftakher99/food-feast-server',},
           { 

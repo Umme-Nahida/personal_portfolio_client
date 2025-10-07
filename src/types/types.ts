@@ -21,15 +21,7 @@ export interface IBlogPost {
 
 
 export interface IWorkSlides {
-  id:number
-  slides:ISlide[]
-}
-
-export interface ISlide {
-  images: Image[]
-}
-
-export interface Image {
+  id: number
   title: string
   path: string
   live: string

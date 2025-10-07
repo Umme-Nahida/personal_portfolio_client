@@ -70,7 +70,6 @@ export const authOptions:NextAuthOptions = {
                     }
 
                     const result = await res.json();
-                    // console.log("result:----",result)
 
                     if (result) {
                         // Any object returned will be saved in `result` property of the JWT
@@ -90,7 +89,6 @@ export const authOptions:NextAuthOptions = {
 
 
                 } catch (err) {
-                    console.log(err)
                     return null
                 }
 

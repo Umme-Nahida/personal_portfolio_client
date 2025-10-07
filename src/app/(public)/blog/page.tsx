@@ -12,7 +12,7 @@ const Blog = async () => {
     })
     const { data } = await res.json()
 
-    // console.log(data)
+    
     return (
         <Container>
             <div id='blog' className='min-h-screen mt-28'>

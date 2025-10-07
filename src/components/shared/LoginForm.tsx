@@ -35,7 +35,7 @@ export default function LoginForm() {
  
 
   const onSubmit = async(values: LoginFormValues) => {
-    console.log("Login submitted:", values);
+    
     try{
        signIn("credentials", {
         ...values,

@@ -1,4 +1,5 @@
 import AboutDetails from "@/components/modules/about/AboutDetails";
+import SkillsSection from "@/components/modules/skill/SkillSection";
 import { IAboutInfo } from "@/types/types";
 
 
@@ -11,11 +12,13 @@ const About = async () => {
     const result = await res.json();
 
     const aboutInfo = result.data.find((item: IAboutInfo) => item.id === 1)
-    // console.log(aboutInfo.skills)
 
     return (
         <div id="about">
             <AboutDetails key={aboutInfo.id} aboutInfo={aboutInfo}></AboutDetails>
+            <div className="mt-10 xl:mt-32">
+                <SkillsSection skillsData={aboutInfo.skills}></SkillsSection>
+            </div>
         </div>
     );
 };
