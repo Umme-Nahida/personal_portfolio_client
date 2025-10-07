@@ -5,6 +5,7 @@ import React from 'react';
 
 export const generateStaticParams = async()=>{
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_API}/blog`)
+    
   const {data:blogs} = await res.json()
 
 
