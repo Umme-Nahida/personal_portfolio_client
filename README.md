@@ -1,36 +1,148 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+This is a **full-stack portfolio website** that showcases personal information, skills, projects, and blogs — all managed through an integrated dashboard. The frontend is built with **Next.js** and **TypeScript**, featuring a modern UI using **Shadcn/UI**. The backend is powered by **Node.js**, **Express**, and **PostgreSQL** with **Prisma ORM** for database management.
+
+The portfolio not only serves as a personal showcase but also includes a **blog management system** where authenticated users can create, edit, and delete blog posts through the dashboard.
+
+---
+
+## Features
+
+###  **Frontend**
+
+* Interactive and responsive portfolio layout
+* Dedicated sections for **About**, **Skills**, **Projects**, and **Contact**
+* **Dashboard page** for authenticated users
+* **Blog creation and management system** (Create, Update, Delete blogs)
+* Secure authentication system using **NextAuth**
+* Modern and clean UI design powered by **Shadcn/UI** components
+
+### **Backend**
+
+* RESTful API built with **Express.js**
+* Data stored and managed in **PostgreSQL**
+* **Prisma ORM** for schema management and queries
+* **JWT authentication** for secure data access
+* **Bcrypt.js** for password hashing
+* Fully structured with modular and scalable code
+
+---
+
+## Technology Stack
+
+**Frontend:**
+
+* Next.js
+* TypeScript
+* Shadcn/UI
+* React
+* NextAuth
+
+**Backend:**
+
+* Node.js
+* Express.js
+* PostgreSQL
+* Prisma ORM
+* JWT
+* Bcrypt.js
+
+---
+
+## ⚡ Setup Instructions
+
+### 1️⃣ Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/your-username/your-portfolio.git
+cd your-portfolio
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2️⃣ Install Dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### For Frontend
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+cd client
+npm install
+```
 
-## Learn More
+#### For Backend
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+cd server
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3️⃣ Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Create a `.env` file in both **client** and **server** directories and add the following:
 
-## Deploy on Vercel
+#### Client `.env`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+NEXTAUTH_SECRET=your_secret
+NEXTAUTH_URL=http://localhost:3000
+NEXT_PUBLIC_API_URL=http://localhost:5000
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#### Server `.env`
+
+```
+DATABASE_URL=postgresql://user:password@localhost:5432/portfolio_db
+JWT_SECRET=your_jwt_secret
+PORT=5000
+```
+
+### 4️Run the Application
+
+#### Start Backend Server
+
+```bash
+cd server
+npm run dev
+```
+
+#### Start Frontend
+
+```bash
+cd client
+npm run dev
+```
+
+Your portfolio will be live at:
+ **[http://localhost:3000](http://localhost:3000)**
+
+---
+
+## Additional Notes
+
+* The dashboard is only accessible after login.
+* You can customize the **project showcase** and **blog structure** as needed.
+* Prisma migrations can be run using:
+
+  ```bash
+  npx prisma migrate dev
+  ```
+* To view or manage the database visually, run:
+
+  ```bash
+  npx prisma studio
+  ```
+
+---
+
+### Future Enhancements
+
+* Add dark/light theme toggle
+* Blog comments section
+* Admin role for user management
+* Image upload for projects and blog posts
+
+---
+
+**Author:** Nahida Akther
+**Stack:** MERN + Next.js + Prisma
+**Purpose:** Showcasing portfolio, projects, and blog management system
