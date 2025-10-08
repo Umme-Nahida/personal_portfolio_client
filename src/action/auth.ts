@@ -38,7 +38,7 @@ export const login = async (data: FieldValues) => {
 
   if(result?.success){
     toast.success("user login successfully")
-    redirect("/")
+    redirect("/dashboard")
   }
 
   if (!res.ok) {

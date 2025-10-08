@@ -1,10 +1,7 @@
 
 import UserProfileDashboard from "@/components/modules/dashboard/UserDashoboard";
-import { getUserSession } from "@/utils/getUserSession";
 
 const DashboardHomePage =async () => {
-
- const session = await getUserSession()
   
   return (
     <div>
