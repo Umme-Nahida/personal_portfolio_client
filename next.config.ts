@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-import { resolve } from 'path';
 
 const nextConfig = {
   images: {
@@ -9,6 +8,10 @@ const nextConfig = {
         hostname: '**',
       },
     ],
+  },
+
+   experimental: {
+    optimizeCss: false,
   },
   
 };
